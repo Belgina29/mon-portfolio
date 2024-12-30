@@ -1,0 +1,72 @@
+
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: orange; }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .welcome-animation {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .welcome-animation .typing {
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite;
+  }
+
+  .card-content {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    width: 70%;
+    animation: fadeIn 1.5s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .card-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+  }
+
+  .card-content p {
+    color: #d1d5db;
+    font-size: 1.125rem;
+  }
+
+  .btn-primary {
+    padding: 0.75rem 2rem;
+    background-color: #4299e1;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: #3182ce;
+    transform: scale(1.05);
+  }

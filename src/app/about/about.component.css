@@ -1,0 +1,68 @@
+/* Header Section */
+.relative {
+  position: relative;
+}
+
+.text-yellow-400 {
+  color: #ecc94b;
+}
+
+/* Skill Card */
+.skill-card {
+  background: #1f2937;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.skill-logo {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 1rem;
+}
+
+/* Timeline Section */
+.timeline-item {
+  margin-bottom: 2rem;
+  position: relative;
+  padding-left: 2rem;
+  border-left: 4px solid #ecc94b;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background: #ecc94b;
+  border-radius: 50%;
+}
+
+h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-in-out;
+}

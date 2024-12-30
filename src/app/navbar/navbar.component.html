@@ -1,0 +1,35 @@
+<nav class="sticky top-0 z-50 bg-gray-800 text-white shadow">
+  <div class="container mx-auto flex justify-between items-center px-4 py-3">
+    <div>
+      <a href="#home" class="text-2xl font-bold">Mon Portfolio</a>
+    </div>
+
+    <div class="hidden md:flex space-x-4">
+      <a href="#home" class="px-4 py-2 hover:bg-gray-600">Accueil</a>
+      <a href="#about" class="px-4 py-2 hover:bg-gray-600">À propos</a>
+      <a href="#projects" class="px-4 py-2 hover:bg-gray-600">Projets</a>
+      <a href="#contact" class="px-4 py-2 hover:bg-gray-600">Contact</a>
+    </div>
+
+    <button
+      class="block md:hidden text-gray-400 hover:text-white"
+      (click)="toggleMobileMenu()"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16m-7 6h7"
+        />
+      </svg>
+    </button>
+  </div>
+
+  <div *ngIf="isMobileMenuOpen" class="md:hidden bg-gray-700 transition transform ease-in-out duration-300">
+    <a href="#home" class="block px-4 py-2 hover:bg-gray-600">Accueil</a>
+    <a href="#about" class="block px-4 py-2 hover:bg-gray-600">À propos</a>
+    <a href="#projects" class="block px-4 py-2 hover:bg-gray-600">Projets</a>
+    <a href="#contact" class="block px-4 py-2 hover:bg-gray-600">Contact</a>
+  </div>
+</nav>
